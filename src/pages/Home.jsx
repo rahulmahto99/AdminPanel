@@ -1,6 +1,7 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Sidebar from "../components/Sidebar";
+import Header from "../components/header";
+import Sidebar from "../components/sidebar";
+import { FaPlusCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -10,10 +11,11 @@ function Home() {
       </div>
       <div className="md:basis-9/12 ">
         <Header />
-        <div className="main body">
-          <h1>Main body</h1>
+        <div className="main body flex justify-center items-center h-96 cursor-pointer">
+          <Link to="./addUser">
+            <FaPlusCircle size={40} color="#1C2434" />
+          </Link>
         </div>
-        <Footer/>
       </div>
     </div>
   );
